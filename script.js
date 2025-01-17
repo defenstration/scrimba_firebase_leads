@@ -8,14 +8,7 @@ import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-apiKey: "AIzaSyDC4ZiyNiG8g-JeTsU61W0LhzXHy5FmJ5E",
-authDomain: "leads-tracker-app-8f09d.firebaseapp.com",
-databaseURL: "https://leads-tracker-app-8f09d-default-rtdb.firebaseio.com",
-projectId: "leads-tracker-app-8f09d",
-storageBucket: "leads-tracker-app-8f09d.firebasestorage.app",
-messagingSenderId: "175869777579",
-appId: "1:175869777579:web:c6927dbe7ef196e05489ee",
-measurementId: "G-8GFLQM4JDJ"
+    databaseURL: "https://leads-tracker-app-8f09d-default-rtdb.firebaseio.com",
 };
 
 // Initialize Firebase

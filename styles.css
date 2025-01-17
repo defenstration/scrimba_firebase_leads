@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+#app-wrapper {
+    font-size: 1rem;
+}
+
+input, button {
+    font-size: inherit;
+}
+
+.flex {
+    display: flex
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+#input {
+    width: 75%;
+    margin-inline: auto;
+    margin-block: 1.5rem;
+    padding: 1rem;
+}
+
+#btn-wrapper {
+    gap: 1rem;
+    margin-inline: auto;
+
+}
+
+.btn {
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 5px
+}
+
+#input-btn, #tab-btn {
+    background-color: green;
+    color: white;
+    
+}
+
+#delete-btn {
+    color: green
+}

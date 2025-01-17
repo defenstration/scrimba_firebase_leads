@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrimba Leads Tracker App by Defenstration</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <link rel = "stylesheet" href = "styles.css">
 </head>
@@ -14,7 +18,11 @@
     </header>
     <main>
         <div id = "app-wrapper" class =  "flex flex-col">
-            <input type = "text" id = "input">
+            <div id = "input-wrapper" class = "flex flex-col">
+                <label for = "input" id = "input-label">Enter URL:</label>
+                <input type = "text" id = "input">
+            </div>
+
             <div id = "btn-wrapper" class = "flex">
                 <button id = "input-btn" class = "btn">Save Input</button>
                 <button id = "delete-btn" class = "btn">Delete All</button>                

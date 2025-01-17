@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -33,8 +33,14 @@ const input = document.getElementById("input")
 const list = document.getElementById("leads-list")
 
 onValue(referenceInDB, (snapshot) => {
-    console.log(snapshot.val())
+    if (snapshot.exists()) {
+       render(Object.values(snapshot.val())) 
+    } else {
+        list.innerHTML = ''
+    }
 })
+
+
 // Render Function
 
 function render(leads) {
@@ -50,12 +56,11 @@ function render(leads) {
 inputBtn.addEventListener("click", () => {
     push(referenceInDB, input.value)
     input.value = ''
-    
-    //render(leads)
 })
 
 // Delete button
 
 deleteBtn.addEventListener("click", () => {
-    input.value = ''
+    remove(referenceInDB)
+    input.value = '' 
 })

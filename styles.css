@@ -3,7 +3,8 @@
 }
 
 body {
-    min-width: 400px;
+    width: 302px;
+    margin-inline: auto;
 }
 
 #app-wrapper {
@@ -22,11 +23,17 @@ input, button {
     flex-direction: column;
 }
 
+#input-wrapper {
+    margin-block: 2.5rem;
+}
+
 #input {
-    width: 75%;
-    margin-inline: auto;
-    margin-block: 1.5rem;
     padding: 1rem;
+}
+
+#input-label {
+    color: green;
+    font-weight: bold;
 }
 
 #btn-wrapper {
